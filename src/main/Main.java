@@ -12,7 +12,7 @@ public class Main {
             Socket soc = new Socket("127.0.0.1", 2345);
             System.out.println("Le port : " + 2345 + "est ouvert");
 
-            String request = "test";
+            String request = "tests";
 
             BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(soc.getOutputStream());
             bufferedOutputStream.write(request.getBytes());
