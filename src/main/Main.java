@@ -1,17 +1,23 @@
 package main;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.IOException;
-import java.net.Socket;
-import java.net.UnknownHostException;
+
+import static main.EnumCommands.Close;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        ConnectionServer connectionServer = new ConnectionServer("127.0.0.1",2345,"LISTIDEA");
-        connectionServer.connection();
+        String host = "127.0.0.1";
+        int port = 2345;
+        WriteRequeste writeRequeste = new WriteRequeste();
+
+        String requeste = writeRequeste.write();
+        while (!requeste.equals(Close.toString()+"$")) {
+            ConnectionServer connectionServer = new ConnectionServer(host, port, requeste);
+            connectionServer.connection();
+            requeste = writeRequeste.write();
+        }
+       System.exit(0);
 
     }
 }

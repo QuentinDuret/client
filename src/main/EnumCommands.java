@@ -5,6 +5,9 @@ package main;
  */
 public enum EnumCommands {
 
+    Close("CLOSE"),
+    PostIdea("POSTIDEA"),
+    ListIdea("LISTIDEA"),
     PostIdeaResponse("POSTIDEARESPONSE"),
     ListIdeaResponse("LISTIDEARESPONSE");
 

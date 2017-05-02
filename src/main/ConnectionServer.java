@@ -61,6 +61,18 @@ public class ConnectionServer {
         response = new String(b, 0, stream);
         return response;
     }
+
+    private void close() {
+        try {
+        soc.close();
+        }
+        catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
 
 
