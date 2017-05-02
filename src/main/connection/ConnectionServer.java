@@ -14,7 +14,7 @@ import java.net.UnknownHostException;
  */
 public class ConnectionServer {
 
-    private PrintWriter writer = null;
+    private BufferedOutputStream bufferedOutputStream = null;
     private BufferedInputStream reader = null;
     private Socket soc = null;
     private String request;
@@ -38,7 +38,7 @@ public class ConnectionServer {
         try {
 
 
-            BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(soc.getOutputStream());
+            bufferedOutputStream = new BufferedOutputStream(soc.getOutputStream());
             bufferedOutputStream.write(request.getBytes());
             bufferedOutputStream.flush();
 
