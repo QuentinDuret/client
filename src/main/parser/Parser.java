@@ -1,6 +1,6 @@
-package main;
+package main.parser;
 
-import static main.EnumCommands.*;
+import static main.enums.EnumCommands.*;
 
 /**
  * Created by Quentin on 01/05/2017.

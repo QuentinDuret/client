@@ -1,4 +1,6 @@
-package main;
+package main.connection;
+
+import main.parser.Parser;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

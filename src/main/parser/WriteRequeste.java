@@ -1,9 +1,8 @@
-package main;
+package main.parser;
 
 import java.util.Scanner;
 
-import static main.EnumCommands.ListIdea;
-import static main.EnumCommands.PostIdea;
+import static main.enums.EnumCommands.PostIdea;
 
 /**
  * Created by Quentin on 02/05/2017.
