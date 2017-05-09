@@ -2,7 +2,7 @@ package main;
 
 
 import main.connection.ConnectionServer;
-import main.parser.WriteRequeste;
+import main.parser.WriteRequest;
 
 import static main.enums.EnumCommands.Close;
 
@@ -10,15 +10,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String host = "127.0.0.1";
-        int port = 2345;
-        WriteRequeste writeRequeste = new WriteRequeste();
+        String host = "10.212.126.230";
+        int port = 1234;
+        WriteRequest writeRequest = new WriteRequest();
 
-        String requeste = writeRequeste.write();
-        while (!requeste.equals(Close.toString()+"$")) {
-            ConnectionServer connectionServer = new ConnectionServer(host, port, requeste);
+        String request = writeRequest.write();
+        while (!request.equals(Close.toString())) {
+            ConnectionServer connectionServer = new ConnectionServer(host, port, request);
             connectionServer.connection();
-            requeste = writeRequeste.write();
+            request = writeRequest.write();
+
         }
        System.exit(0);
 
