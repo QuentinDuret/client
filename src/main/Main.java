@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String host = "10.212.126.230";
+        String host = "10.212.117.245";
         int port = 1234;
         WriteRequest writeRequest = new WriteRequest();
 
